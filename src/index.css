@@ -1,0 +1,318 @@
+@import "tailwindcss";
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+:root {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #f4f7fb;
+  background: #071019;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  scroll-behavior: smooth;
+  background: #071019;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+
+  margin: 0;
+
+  background: #071019;
+  color: #f4f7fb;
+
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: rgba(56, 189, 248, 0.28);
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #071019;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #263746;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #385064;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.section-container {
+  width: 100%;
+  max-width: 1180px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+  width: 100%;
+
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+
+/* =========================================================
+   CYAN / BLUE LINE
+   ========================================================= */
+
+.cyan-line {
+  width: 38px;
+  height: 2px;
+
+  background: #38bdf8;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   GRID BACKGROUND
+   ========================================================= */
+
+.grid-background {
+  background-color: #071019;
+
+  background-image:
+    linear-gradient(
+      rgba(148, 163, 184, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+}
+
+
+/* =========================================================
+   PORTFOLIO CARDS
+   ========================================================= */
+
+.portfolio-card {
+  position: relative;
+
+  width: 100%;
+
+  border: 1px solid rgba(148, 163, 184, 0.13);
+
+  border-radius: 14px;
+
+  background: rgba(13, 27, 39, 0.85);
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  border-color: rgba(56, 189, 248, 0.40);
+
+  background: rgba(17, 35, 50, 0.95);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.30),
+    0 0 35px rgba(56, 189, 248, 0.04);
+}
+
+
+/* =========================================================
+   BLUE GLOW
+   ========================================================= */
+
+.cyan-glow {
+  box-shadow:
+    0 0 70px rgba(56, 189, 248, 0.07);
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.mono-label {
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.25em;
+
+  color: #38bdf8;
+}
+
+
+/* =========================================================
+   BUTTON SAFETY
+   ========================================================= */
+
+a.inline-flex {
+  width: fit-content;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .section-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .section-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .cyan-line {
+    width: 28px;
+  }
+
+  .portfolio-card {
+    border-radius: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .section-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
