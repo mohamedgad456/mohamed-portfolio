@@ -53,6 +53,27 @@ const projects = [
       "Dark / Light Mode",
     ],
   },
+
+  {
+    number: "04",
+    year: "2026",
+    title: "AI Platforms for Healthcare Applications",
+    category: "Bachelor's Thesis · NLP",
+    description:
+      "Developed a medical Arabic-English code-switched dataset, MedCS-TriagE, for triage classification using real-world medical audio data.",
+    details:
+      "Built a full NLP pipeline including audio denoising, Whisper-based speech recognition, sentence correction, and multilingual classification using XLM-R and DeBERTa models. Evaluated dataset quality and model performance using code-switching metrics and cross-validation techniques for clinical NLP applications.",
+    technologies: [
+      "Python",
+      "NLP",
+      "Whisper",
+      "XLM-R",
+      "DeBERTa",
+      "Code-Switching",
+      "Dataset Construction",
+      "Clinical NLP",
+    ],
+  },
 ];
 
 export default function Projects() {
@@ -90,7 +111,6 @@ export default function Projects() {
 
         </div>
 
-
         <div className="grid gap-5 md:grid-cols-2">
 
           {projects.map((project) => (
@@ -111,7 +131,6 @@ export default function Projects() {
 
               </div>
 
-
               <p className="mt-8 font-mono text-[9px] uppercase tracking-[0.2em] text-gray-600">
                 {project.category}
               </p>
@@ -128,7 +147,6 @@ export default function Projects() {
                 {project.details}
               </p>
 
-
               <div className="mt-7 flex flex-wrap gap-2">
 
                 {project.technologies.map((technology) => (
@@ -141,7 +159,6 @@ export default function Projects() {
                 ))}
 
               </div>
-
 
               <div className="mt-7 h-px w-0 bg-cyan-400 transition-all duration-500 group-hover:w-12" />
 
